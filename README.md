@@ -2,8 +2,16 @@
 Save Our Snakes
 ---
  
-Welcome.
+Welcome to this rocking react project.
+
+Usage
+---
  
+Start the development server with this command:
+ 
+```
+npm start
+```
  
  
 Setup
@@ -11,4 +19,12 @@ Setup
  
 ```
 npm install
+```
+
+ 
+Compile
+---
+ 
+```
+npm run compile
 ```
