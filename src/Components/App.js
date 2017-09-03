@@ -19,7 +19,7 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
         <div>
           <Navbar/>
-            <Greeting/>
+          <Greeting/>
           <Footer/>
         </div>
       </ThemeProvider>

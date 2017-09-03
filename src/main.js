@@ -4,8 +4,7 @@ import App from './Components/App';
 import About from './Components/About';
 
 import { render } from 'react-dom';
-import {BrowserRouter, Route } from 'react-router-dom';
-
+import { BrowserRouter, Route } from 'react-router-dom';
 import './main.css';
 
 const Root = () => {
