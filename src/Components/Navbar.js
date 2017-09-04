@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const NavbarWrapper = styled.header`
 	padding: 0 20px;
@@ -14,7 +15,7 @@ const LinkList = styled.ul`
 	right: 1em;
 `;
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
 	font-size: 12px;
 
 	&:hover {
@@ -32,7 +33,7 @@ const Logo = styled.img`
 	max-width: 120px;
 `;
 
-const LogoLink = styled.a`
+const LogoLink = styled(Link)`
 	display: inline-block;
 	position: absolute;
 	top: 1em;
@@ -42,10 +43,10 @@ const LogoLink = styled.a`
 const Navbar = () => {
 	return (
 		<NavbarWrapper>
-			<LogoLink><Logo src="/images/logo.svg"/></LogoLink>
+			<LogoLink to="/"><Logo src="/images/logo.svg"/></LogoLink>
 			<LinkList>
-				<ListItem><Link href="">About the Snakes</Link></ListItem>
-				<ListItem><Link href="">Sponsor a Snake</Link></ListItem>
+				<ListItem><StyledLink to="/about">About the Snakes</StyledLink></ListItem>
+				<ListItem><StyledLink to ="about">Sponsor a Snake</StyledLink></ListItem>
 			</LinkList>
 		</NavbarWrapper>
 	);

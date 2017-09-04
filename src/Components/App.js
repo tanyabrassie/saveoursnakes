@@ -1,10 +1,10 @@
 import React from 'react';
-import Footer from './Footer';
-import Greeting from './Greeting';
-import Navbar from './Navbar';
 import styled from 'styled-components';
 import theme from '../theme';
 import {ThemeProvider} from 'styled-components';
+import Navbar from './Navbar';
+import Content from './Content';
+import Footer from './Footer';
 
 class App extends React.Component {
   constructor() {
@@ -16,14 +16,16 @@ class App extends React.Component {
  
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      <div>
+      <ThemeProvider theme={theme}> 
         <div>
           <Navbar/>
-          <Greeting/>
+          <Content/>
           <Footer/>
-        </div>
+        </div> 
       </ThemeProvider>
-    );
+      </div>
+    )
   }
 }
 
