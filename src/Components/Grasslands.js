@@ -6,10 +6,14 @@ const GrasslandsContainer = styled.section`
 	margin: 3em 0 0 0;
 `;
 
+const Image = styled.img`
+	width: 100%;
+`;
+
 const Grasslands = () => {
 	return (
 		<GrasslandsContainer>
-			<img src="/images/grass.svg"/>
+			<Image src="/images/grass.svg"/>
 		</GrasslandsContainer>
 	);
 };

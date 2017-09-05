@@ -43,7 +43,7 @@ const LogoLink = styled(Link)`
 const Navbar = () => {
 	return (
 		<NavbarWrapper>
-			<LogoLink to="/"><Logo src="/images/logo.svg"/></LogoLink>
+			<LogoLink to="/"><Logo src="/images/logo-alt.png"/></LogoLink>
 			<LinkList>
 				<ListItem><StyledLink to="/about">About the Snakes</StyledLink></ListItem>
 				<ListItem><StyledLink to ="about">Sponsor a Snake</StyledLink></ListItem>

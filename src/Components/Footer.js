@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-	background-color: #4500d5;
+	background-color: ${props => props.theme.colors.mainPurple};
 	width: 100%;
 	opacity: 0.7;
 `;

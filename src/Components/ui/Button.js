@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const PrimaryButton = styled.button`
-	height: 48px;
+
+const PrimaryButton = styled(Link)`
 	background-color: ${props => props.theme.colors.medPurple};
-	border: none;
 	display: block;
 	cursor: pointer;
 	margin: auto;
+	text-align: center;
 	font-weight: 600;
 	border-radius: 50px;
-	padding: 0 2.2em;
+	padding: 1.2em;
 	font-size: 1em;
 	transition: .5s opacity;
 
@@ -21,7 +22,7 @@ const PrimaryButton = styled.button`
 
 const Button = (props) => {
 	return (
-		<PrimaryButton>{props.innerText}</PrimaryButton>
+		<PrimaryButton to={props.url}>{props.innerText}</PrimaryButton>
 	);
 }
 
