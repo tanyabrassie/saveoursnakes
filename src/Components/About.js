@@ -22,7 +22,7 @@ class About extends React.Component {
 	render() {
 		return (
 		<section>
-			<Headline>This is the about page.</Headline>
+			<Headline>Meet the Snakes in Your Area.</Headline>
 			<SnakeTiles snakeData={filteredSnakes}/>
 		</section>
 		);
