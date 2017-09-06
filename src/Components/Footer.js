@@ -7,8 +7,9 @@ const FooterContainer = styled.footer`
 	opacity: 0.7;
 `;
 
-const FooterText = styled.div`
+const FooterText = styled.p`
 	text-align: center;
+	display: block;
 	color: #fff;
 	padding: 40px 0;
 `;

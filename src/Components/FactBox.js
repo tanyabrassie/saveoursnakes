@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Paragraph, SecondaryHeadline } from './ui/typography';
 import { colorMorph, slowBob } from './ui/animations';
 
@@ -40,12 +40,21 @@ const HarmlessBanner = styled.div`
 	top: 20px;
 	position: absolute;
 	right: -15px;
+
+	${props => props.venonmous && css`
+		background-color: red;
+	`}
 `;
+
+const bannerMessages = {
+	venonmous: 'Ah, Dangerousss!',
+	nonvenonmous: 'Certified Harmless!'
+}
 
 const FactBox = (props) => {
 	return (
 		<FactBoxContainer>
-		<HarmlessBanner>Certified harmlesss!</HarmlessBanner>
+		<HarmlessBanner venonmous={props.snake.venonmous}>{props.snake.venonmous ? bannerMessages.venonmous : bannerMessages.nonvenonmous}</HarmlessBanner>
 			<ImageContainer><Image src={props.snake.img}/></ImageContainer>
 			<StyledSecondaryHeadline>{props.snake.title}</StyledSecondaryHeadline>
 			<Paragraph>{props.snake.text}</Paragraph>
