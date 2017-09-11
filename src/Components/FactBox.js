@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Paragraph, SecondaryHeadline } from './ui/typography';
 import { colorMorph, slowBob } from './ui/animations';
 
@@ -30,7 +30,6 @@ const StyledSecondaryHeadline = styled(SecondaryHeadline)`
 
 const HarmlessBanner = styled.div`
 	border-radius: 50px;
-	background-color: #f163ff;
 	padding: .7em;
 	opacity: .8;
 	color: #fff;
@@ -40,10 +39,7 @@ const HarmlessBanner = styled.div`
 	top: 20px;
 	position: absolute;
 	right: -15px;
-
-	${props => props.venonmous && css`
-		background-color: red;
-	`}
+	background-color: ${props => props.venonmous ? 'red' : '#f163ff'};
 `;
 
 const bannerMessages = {

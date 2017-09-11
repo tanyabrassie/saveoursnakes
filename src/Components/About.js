@@ -7,6 +7,7 @@ import snakeData from '../snakedata';
 function filterSnakes (snake) {
 	return !snake.featured;
 }
+
 var filteredSnakes = snakeData.filter(filterSnakes);
 
 console.log (filteredSnakes);
