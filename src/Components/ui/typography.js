@@ -5,6 +5,7 @@ export const Headline = styled.h1`
 	font-weight: 600;
 	text-align: center;
 	margin: 2em 0;
+	color: ${props => props.theme.colors.electricPurple};
 `;
 
 export const SecondaryHeadline = styled.h2`

@@ -10,8 +10,15 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      count: 0,
+      members: '',
     };
+
+  this.addMember = this.addMember.bind(this);
+  }
+
+  addMember(member) {
+    console.log(member);
+    this.setState(member);
   }
  
   render() {
@@ -19,7 +26,7 @@ class App extends React.Component {
       <ThemeProvider theme={theme}> 
         <div> 
           <Navbar/>
-          <Content/>
+          <Content addMember={this.addMember}/>
           <Footer/>
         </div>
       </ThemeProvider>

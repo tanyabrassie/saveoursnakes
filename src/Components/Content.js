@@ -5,11 +5,10 @@ import Home from './Home';
 import About from './About';
 import Sponsor from './Sponsor';
 
-
-const Content = () => {
+const Content = (props) => {
 	return (
 		<Switch>
-			<Route exact path='/' component={Home}/>
+			<Route exact path='/'><Home addMember={props.addMember}/></Route>
 			<Route exact path='/about' component={About}/>
 			<Route exact path='/sponsor' component={Sponsor}/>
 		</Switch>
