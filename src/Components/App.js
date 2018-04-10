@@ -16,15 +16,13 @@ class App extends React.Component {
  
   render() {
     return (
-      <div>
       <ThemeProvider theme={theme}> 
-        <div>
+        <div> 
           <Navbar/>
           <Content/>
           <Footer/>
-        </div> 
+        </div>
       </ThemeProvider>
-      </div>
     )
   }
 }

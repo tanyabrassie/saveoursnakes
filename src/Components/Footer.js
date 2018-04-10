@@ -14,7 +14,6 @@ const FooterText = styled.p`
 	padding: 40px 0;
 `;
 
-
 const Footer = () => {
   return (
     <FooterContainer>

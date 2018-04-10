@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 const NavbarWrapper = styled.header`
 	padding: 0 20px;
-	background-color: ${props => props.theme.colors.palePurple};
+	box-shadow: ${props => props.theme.dropShadows.gray};
+	background-color: ${props => props.theme.colors.white};
 	height: 75px;	
 	position: relative;
 `;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Headline} from './ui/typography';
 import styled from 'styled-components';
-import Form from './Form';
+import SnakeForm from './Sections/SnakeForm';
 
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);

@@ -8,13 +8,11 @@ import Sponsor from './Sponsor';
 
 const Content = () => {
 	return (
-		<div>
-			<Switch>
-				<Route exact path='/' component={Home}/>
-				<Route exact path='/about' component={About}/>
-				<Route exact path='/sponsor' component={Sponsor}/>
-			</Switch>
-		</div>
+		<Switch>
+			<Route exact path='/' component={Home}/>
+			<Route exact path='/about' component={About}/>
+			<Route exact path='/sponsor' component={Sponsor}/>
+		</Switch>
 	);	
 };
 
