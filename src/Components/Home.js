@@ -23,7 +23,7 @@ const Home = (props) => {
 			<Grasslands />
 			<SignUpZone align="center">
 				<SignUpZoneContent>
-					<Box w={1/2}><SaviorWall/></Box>
+					<Box w={1/2}><SaviorWall memberList={props.memberList}/></Box>
 					<Box w={1/2}><SnakeForm addMember={props.addMember}/></Box>
 				</SignUpZoneContent>
 			</SignUpZone>
