@@ -47,7 +47,7 @@ const Navbar = () => {
 			<LogoLink to="/"><Logo src="/images/logo-alt.png"/></LogoLink>
 			<LinkList>
 				<ListItem><StyledLink to="/about">About the Snakes</StyledLink></ListItem>
-				<ListItem><StyledLink to ="/sponsor">Sponsor a Snake</StyledLink></ListItem>
+				<ListItem><StyledLink to ="/savedsnakes">Saved Snakes</StyledLink></ListItem>
 			</LinkList>
 		</NavbarWrapper>
 	);

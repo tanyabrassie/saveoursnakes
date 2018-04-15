@@ -10,15 +10,15 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      members: '',
+      members: [],
     };
 
   this.addMember = this.addMember.bind(this);
   }
 
   addMember(member) {
-    console.log(member);
-    this.setState(member);
+    const newMembers = [...this.state.members, member];
+    this.setState({members: newMembers});
   }
  
   render() {
