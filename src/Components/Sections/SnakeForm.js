@@ -34,8 +34,8 @@ class SnakeForm extends React.Component {
 
 	render (props) {
 		return (    
-			<FormContainer is="form">
-				<Headline>Save a Snake Now!</Headline>
+			<FormContainer p={2} is="form">
+				<Headline py={2}>Save a Snake Now!</Headline>
 				<p>Sponsor a snake today and we'll put you on the hall of heroes!</p>
 				<label>First Name</label>
 				<input type="text" 

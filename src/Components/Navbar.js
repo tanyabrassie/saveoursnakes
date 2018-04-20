@@ -33,7 +33,7 @@ const ListItem = styled.li`
 
 const Logo = styled.img`
 	opacity: .9;
-	max-width: 120px;
+	max-width: 60px;
 `;
 
 const LogoLink = styled(Link)`

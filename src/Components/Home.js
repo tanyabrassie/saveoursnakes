@@ -13,22 +13,22 @@ const SignUpZone = styled.section`
 	background-color: ${props => props.theme.colors.delicatePink};
 `;
 
-const SignUpZoneContent = styled(Flex)`
-	max-width: 800px;
+const Content = styled(Flex)`
+	max-width: 820px;
 	margin: auto;
 `;
 
 const Home = (props) => {
 	return (
 		<div>
-			<SnakeStory />
-			<Grasslands />
-			<SignUpZone align="center">
-				<Flex>
-					<Box w={1/2}><SaviorWall memberList={props.memberList}/></Box>
-					<Box w={1/2}><SnakeForm addMember={props.addMember}/></Box>
-				</Flex>
-			</SignUpZone>
+      <SnakeStory />
+      <Grasslands />
+      <SignUpZone align="center">
+        <Content flexDirection={["column", "column", "row"]}>
+          <Box px={2} w={1/2}><SaviorWall memberList={props.memberList}/></Box>
+          <Box px={2} w={1/2}><SnakeForm addMember={props.addMember}/></Box>
+        </Content>
+      </SignUpZone>
 		</div>
 	);
 };
