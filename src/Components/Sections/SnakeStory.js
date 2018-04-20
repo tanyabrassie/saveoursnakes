@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Text} from 'rebass';
 
-import Button from '../ui/Button';
+import {ButtonLink} from '../ui/Button';
 import {HeadlineLarge, BasicText} from '../ui/typography';
 import {colorMorph, slowRock} from '../ui/animations';
 
@@ -67,7 +67,7 @@ const SnakeStory = () => {
       </IconContainer>
       <StyledParagraph>Our local snakes are in peril! Since the mid-1800s the area's snake population has declined by nearly 95%. The urbanization of Prospect Park and its surrounding areas in the late nineteenth century resulted in the significant loss of natural snake dwellings. Continuing construction of high-rise, luxury buildings along the park's perimeter has only intensified the problem and turned the area into a veritable danger zone for those brave snakes choosing to remain. Even more upsetting are the plights of those luckless snakes forced out of their dens with no viable alternatives. Nooks and crannies, once attractive housing options for displaced snakes, are being rapidly filled with concrete and the subway tunnels, once a save haven for those down and out, are now largely controlled by the anti-snake rat populations following their triumph in the Tunnel Turf Tusssle of 2010. Our snakes are under attack and they need your help! Sponsor a snake today and give a slithering friend the comfort and stability it needs to flourish and thrive in the Big Apple. </StyledParagraph>
       <ButtonContainer>
-        <Button url="/about" innerText="Sponsor a Snake"/>
+        <ButtonLink to="/about">Sponsor a Snake</ButtonLink>
       </ButtonContainer>
     </section>
   );
