@@ -5,6 +5,8 @@ import {ThemeProvider} from 'styled-components';
 import Navbar from './Navbar';
 import Content from './Content';
 import Footer from './Footer';
+import axios from 'axios';
+
 
 class App extends React.Component {
   constructor() {
@@ -15,6 +17,8 @@ class App extends React.Component {
     };
 
   this.addMember = this.addMember.bind(this);
+  this.getMemberProjects = this.getMemberProjects.bind(this);
+
   }
 
   addMember(member) {
@@ -26,6 +30,19 @@ class App extends React.Component {
     localStorage.setItem('members', JSON.stringify(newMembers));
   }
 
+  getMemberProjects() {
+		const { memberList } = this.props;
+		const newMemberList = [];
+		memberList.map((member, index) => {
+			const zipcode = member.zipcode;
+			axios.get('http://localhost:4545/getSnakeProjects?zip=' + zipcode)
+				.then(response => {
+					newMemberList.push(Object.assign(member, {projectData: response.data}));
+					this.setState({membersWithData: newMemberList});
+				});
+		});
+	};
+
   render() {
     return (
       <ThemeProvider theme={theme}> 
@@ -33,7 +50,9 @@ class App extends React.Component {
           <Navbar/>
           <Content 
             memberList={this.state.members} 
-            addMember={this.addMember}/>
+            addMember={this.addMember}
+            getMemberProjects={this.getMemberProjects}
+          />
           <Footer/>
         </div>
       </ThemeProvider>

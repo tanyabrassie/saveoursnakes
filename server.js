@@ -23,7 +23,6 @@ app.use(webpackDevMiddleware(compiler, {
 // create a new route that sends the request for the projects
 app.get('/getSnakeProjects', function(req, res) {
   const zip = req.query.zip;
-  console.log(req);
   axios.get('https://api.donorschoose.org/common/json_feed.html?zip=' + zip + '&APIKey=ef4uju946azk')
    .then(response => res.json(response.data));
 });

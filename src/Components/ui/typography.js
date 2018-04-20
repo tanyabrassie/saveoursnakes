@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Text as RebassText} from 'rebass';
 
 export const Headline = styled.h1`
 	font-size: 1.5em;
@@ -16,4 +17,8 @@ export const SecondaryHeadline = styled.h2`
 
 export const Paragraph = styled.p`
 	line-height: 1.5em;
+`;
+
+export const AppText = styled(RebassText)`
+	color: ${props => props.theme.colors.murkyPurple};
 `;

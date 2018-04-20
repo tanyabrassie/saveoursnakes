@@ -7,7 +7,9 @@ const NavbarWrapper = styled.header`
 	box-shadow: ${props => props.theme.dropShadows.gray};
 	background-color: ${props => props.theme.colors.white};
 	height: 75px;	
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 `;
 
 const LinkList = styled.ul`

@@ -18,6 +18,7 @@ const Content = (props) => {
 			<Route exact path='/saved-snakes'>
 				<SavedSnakesPage 
 					memberList={props.memberList}
+					getMemberProjects={props.getMemberProjects}
 				/>
 			</Route>
 		</Switch>
