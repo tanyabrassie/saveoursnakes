@@ -1,7 +1,7 @@
 import React from 'react';
 import {Flex, Box, Button} from 'rebass';
 import styled from 'styled-components';
-import {Headline} from './ui/typography';
+import {Headline, BasicText} from './ui/typography';
 
 const MemberBox = styled(Button)`
 	box-shadow: 1px 1px 6px 0px #eaeaea;
@@ -21,40 +21,26 @@ class SavedSnakesPage extends React.Component {
 		this.state = {
 			membersWithData: []
 		};
-
 	}
-
-	// getMemberSnakes() {
-	// 	const { memberList } = this.props;
-	// 	const newMemberList = [];
-	// 	memberList.map((member, index) => {
-	// 		const zipcode = member.zipcode;
-	// 		axios.get('http://localhost:4545/getSnakeProjects?zip=' + zipcode)
-	// 			.then(response => {
-	// 				newMemberList.push(Object.assign(member, {projectData: response.data}));
-	// 				this.setState({membersWithData: newMemberList});
-	// 			});
-	// 	});
-	// };
 
 	render() {
 		return (
 			<section>
 				<Headline>Rehabilited Snake Directory</Headline>
-				<strong>Read more about our heroes and those they've saved</strong>
+				<BasicText>Read more about our heroes and those they've saved</BasicText>
 				{this.props.memberList.map((member, index) => {
 					return (
 						<Flex>
 							<MemberBox p={3} key={index}>
 								<Box p={2}>
-									<strong>{member.firstName} {member.lastName}</strong>
-									<span>Assigned zone: {member.zipcode}</span>
+									<BasicText p={1} is="span">{member.firstName} {member.lastName}</BasicText>
+									<BasicText is="span">Assigned zone: {member.zipcode}</BasicText>
 								</Box>
 							</MemberBox>
 						</Flex>
 					);
 				})}
-				<button onClick={this.props.getMemberProjects}>Click Me!</button>
+				<button>Click Me!</button>
 			</section>
 		);
 	};

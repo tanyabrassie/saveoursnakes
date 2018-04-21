@@ -1,13 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {Link} from 'react-router-dom';
+import {Button as RebassButton} from 'rebass';
 
 
-const PrimaryButton = styled(Link)`
-	background-color: ${props => props.theme.colors.medPurple};
+const ButtonStyles = css`
+	background-color: ${props => props.theme.colors.electricPurple};
+	color: ${props => props.theme.colors.white};
 	display: block;
 	cursor: pointer;
 	margin: auto;
+	width: 100%;
 	text-align: center;
 	font-weight: 600;
 	border-radius: 50px;
@@ -20,10 +23,11 @@ const PrimaryButton = styled(Link)`
 	}
 `;
 
-const Button = (props) => {
-	return (
-		<PrimaryButton to={props.url}>{props.innerText}</PrimaryButton>
-	);
-}
+export const ButtonLink = styled(Link)`
+	${ButtonStyles};
+`;
 
-export default Button;
+export const Button = styled(RebassButton)`
+	${ButtonStyles};
+`;
+

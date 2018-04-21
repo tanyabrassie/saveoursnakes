@@ -7,41 +7,35 @@ import Content from './Content';
 import Footer from './Footer';
 import axios from 'axios';
 
-
 class App extends React.Component {
   constructor() {
     super();
     const storedMembers = JSON.parse(localStorage.getItem('members'));
-    this.state = {
-      members: storedMembers,
-    };
 
+    if (storedMembers) {
+      this.state = {
+        members: storedMembers,
+      };
+    } else {
+      this.state = {
+        members: [],
+      };
+    }
+  
   this.addMember = this.addMember.bind(this);
-  this.getMemberProjects = this.getMemberProjects.bind(this);
-
   }
 
+  // make call to donors choose, add project data to member object and
+  // update state, and then update local storage with updated state 
   addMember(member) {
-    // get the state, spread it into a new array plus the new member
-    const newMembers = [...this.state.members, member];
-    this.setState({members: newMembers});
-
-    // adding new state to the local storage 
-    localStorage.setItem('members', JSON.stringify(newMembers));
+    axios.get('http://localhost:4545/getSnakeProjects?zip=' + member.zipcode)
+    .then(response => {
+      const newMember = (Object.assign(member, {projectData: response.data}));
+      const updatedMembers = [...this.state.members, newMember];
+      this.setState({members: updatedMembers});
+      localStorage.setItem('members', JSON.stringify(updatedMembers));
+    });
   }
-
-  getMemberProjects() {
-		const { memberList } = this.props;
-		const newMemberList = [];
-		memberList.map((member, index) => {
-			const zipcode = member.zipcode;
-			axios.get('http://localhost:4545/getSnakeProjects?zip=' + zipcode)
-				.then(response => {
-					newMemberList.push(Object.assign(member, {projectData: response.data}));
-					this.setState({membersWithData: newMemberList});
-				});
-		});
-	};
 
   render() {
     return (
@@ -51,7 +45,6 @@ class App extends React.Component {
           <Content 
             memberList={this.state.members} 
             addMember={this.addMember}
-            getMemberProjects={this.getMemberProjects}
           />
           <Footer/>
         </div>
