@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import {Headline, BasicText} from '../ui/typography';
 import {Button} from '../ui/Button';
+import FormErrors from '../FormErrors';
 
 const FormContainer = styled(Flex)`
 	flex-direction: column;
@@ -16,7 +17,13 @@ class SnakeForm extends React.Component {
         firstName:'',
         lastName:'',
         zipcode:'',
-        email: ''
+        email: '',
+        formErrors: {firstName: '', lastName: '', zipcode: '', email: ''},
+        firstNameValid: false,
+        lastNameValid: false,
+        zipcodeValid: false,
+        emailvalid: false,
+        formValid: false,
 			};
 
 			this.handleChange = this.handleChange.bind(this);
@@ -24,13 +31,43 @@ class SnakeForm extends React.Component {
 		
 	}
 	handleChange(event) {
-			this.setState({[event.target.name]: event.target.value});
-	}
+      this.setState({[event.target.name]: event.target.value},
+        () => 
+          {this.validateField(name, value)}
+      );
+  }
+  
+  validateField(fieldName, value) {
+    let fieldValidationErrors = this.state.formErrors;
+    let firstNameValid = this.state.firstNameValid;
+    let lastNameValid = this.state.lastNameValid;
+    let emailValid = this.state.emailValid;
+    let zipcodeValid = this.state.zipcodeValid;
+
+    switch(fieldName) {
+      case 'email':
+      emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+      fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+      break;
+      default: 
+      break;
+    }
+
+    this.setState({formErrors: fieldValidationErrors,
+      emailValid: emailValid,
+      passwordValid: passwordValid
+    }, this.validateForm);
+}
+
+validateForm() {
+this.setState({formValid: this.state.emailValid && this.state.passwordValid});
+  }
 
 	handleSubmit(e){
 		e.preventDefault();
     this.props.addMember(this.state);
 
+    //clear state after submission 
     this.setState({
       firstName:'',
       lastName:'',
@@ -41,7 +78,7 @@ class SnakeForm extends React.Component {
   
 	render (props) {
 		return (    
-			<FormContainer p={2} is="form" onSubmit={this.handleSubmit}>  
+			<FormContainer p={2} is="form" onSubmit={this.handleSubmit}> 
 				<Headline is="h2" py={2}>Save a Snake Right Now!</Headline>
 				<BasicText py={2}>
 					It's easy, just three steps! Fill out the form below and you'll immediately be featured on our Snake Savior Wall and notified of your snake wards.  
