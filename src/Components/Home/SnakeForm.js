@@ -4,10 +4,11 @@ import styled from 'styled-components';
 
 import {Headline, BasicText} from '../ui/typography';
 import {Button} from '../ui/Button';
-import FormErrors from '../FormErrors';
+import ErrorBanner from '../ErrorBanner';
 
 const FormContainer = styled(Flex)`
-	flex-direction: column;
+  flex-direction: column;
+  border-radius: 2px;
 `;
 
 class SnakeForm extends React.Component {
@@ -18,12 +19,7 @@ class SnakeForm extends React.Component {
         lastName:'',
         zipcode:'',
         email: '',
-        formErrors: {firstName: '', lastName: '', zipcode: '', email: ''},
-        firstNameValid: false,
-        lastNameValid: false,
-        zipcodeValid: false,
-        emailvalid: false,
-        formValid: false,
+        hasErrors: false
 			};
 
 			this.handleChange = this.handleChange.bind(this);
@@ -31,10 +27,7 @@ class SnakeForm extends React.Component {
 		
 	}
 	handleChange(event) {
-      this.setState({[event.target.name]: event.target.value},
-        () => 
-          {this.validateField(name, value)}
-      );
+      this.setState({[event.target.name]: event.target.value});
   }
   
   validateField(fieldName, value) {
@@ -60,28 +53,47 @@ class SnakeForm extends React.Component {
 }
 
 validateForm() {
-this.setState({formValid: this.state.emailValid && this.state.passwordValid});
+  this.setState({formValid: this.state.emailValid && this.state.passwordValid});
   }
 
 	handleSubmit(e){
-		e.preventDefault();
-    this.props.addMember(this.state);
+    e.preventDefault();
+    //check to see if form is valid.
+    const emailRegEx = /\S+@\S+\.\S+/;
+    const zipCodeRegEx = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+    const passesValidation = this.state.firstName.trim().length > 1 && 
+      this.state.lastName.trim().length > 1 && 
+      emailRegEx.test(this.state.email) && 
+      zipCodeRegEx.test(this.state.zipcode);
+    
+    if (passesValidation) {
+      this.props.addMember(this.state);
 
-    //clear state after submission 
-    this.setState({
-      firstName:'',
-      lastName:'',
-      zipcode:'',
-      email: ''
-    });
+      //clear state after submission 
+      this.setState({
+        firstName:'',
+        lastName:'',
+        zipcode:'',
+        email: '',
+        hasErrors: false
+      });
+
+    } else {
+      //show errors
+     this.setState({hasErrors: true});
+    }
+  }
+
+  showErrorMessage() {
+
   }
   
 	render (props) {
-		return (    
-			<FormContainer p={2} is="form" onSubmit={this.handleSubmit}> 
+		return (
+			<FormContainer my={4} px={5} is="form" onSubmit={this.handleSubmit}>
 				<Headline is="h2" py={2}>Save a Snake Right Now!</Headline>
 				<BasicText py={2}>
-					It's easy, just three steps! Fill out the form below and you'll immediately be featured on our Snake Savior Wall and notified of your snake wards.  
+					It's easy, just three steps! Fill out the form below and you'll immediately be featured on our high profile Snake Savior Wall and notified of the snakes you've saved!  
 				</BasicText>
 				<BasicText is="label">First Name</BasicText>
 				<input type="text" 
@@ -103,9 +115,10 @@ this.setState({formValid: this.state.emailValid && this.state.passwordValid});
 					name="zipcode"
 					value={this.state.zipcode}
 					onChange={this.handleChange} />   
-        <Flex w={'200px'} py={2}> 
-          <Button>Save Snakes Now</Button>   
+        <Flex w={'200px'} py={3}> 
+          <Button>Save Snakes Now</Button>
         </Flex>
+        {this.state.hasErrors && <ErrorBanner message={'Whoops, you have some errors!'}/>}
 			</FormContainer>    
 		);
 	}

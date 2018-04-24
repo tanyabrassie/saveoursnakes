@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Headline } from './ui/typography';
+import { MegaHeadline } from '../ui/typography';
 import SnakeTiles from './SnakeTiles';
-import snakeData from '../snakedata';
+import snakeData from '../../snakedata';
 
 function filterSnakes (snake) {
 	return !snake.featured;
@@ -10,9 +10,7 @@ function filterSnakes (snake) {
 
 var filteredSnakes = snakeData.filter(filterSnakes);
 
-console.log (filteredSnakes);
-
-class About extends React.Component {
+class SnakesInNeed extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -23,10 +21,10 @@ class About extends React.Component {
 	render() {
 		return (
 		<section>
-			<Headline>Meet the Snakes in Your Area.</Headline>
+			<MegaHeadline py={4} textAlign="center">Snakes in Need</MegaHeadline>
 			<SnakeTiles snakeData={filteredSnakes}/>
 		</section>
 		);
 	};
 }	
-export default About;
+export default SnakesInNeed;

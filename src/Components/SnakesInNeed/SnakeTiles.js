@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import FactBox from './FactBox';
-import { Headline } from './ui/typography';
+import FactBox from '../FactBox';
+import { Headline } from '../ui/typography';
 
 const Tiles = styled.section`
 	display: flex;	

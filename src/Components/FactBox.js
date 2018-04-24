@@ -34,23 +34,23 @@ const HarmlessBanner = styled.div`
 	opacity: .8;
 	color: #fff;
 	font-size: .75em;
-	width: 100px;
+	width: 90px;
 	text-align: center;
 	top: 20px;
 	position: absolute;
 	right: -15px;
-	background-color: ${props => props.venonmous ? 'red' : '#f163ff'};
+	background-color: ${props => props.inNeed ? 'red' : '#f163ff'};
 `;
 
 const bannerMessages = {
-	venonmous: 'Ah, Dangerousss!',
-	nonvenonmous: 'Certified Harmless!'
+	inNeed: 'Endangered!',
+	notInNeed: 'Threatened'
 }
 
 const FactBox = (props) => {
 	return (
 		<FactBoxContainer>
-		<HarmlessBanner venonmous={props.snake.venonmous}>{props.snake.venonmous ? bannerMessages.venonmous : bannerMessages.nonvenonmous}</HarmlessBanner>
+		<HarmlessBanner inNeed={props.snake.inNeed}>{props.snake.inNeed ? bannerMessages.inNeed : bannerMessages.notInNeed}</HarmlessBanner>
 			<ImageContainer><Image src={props.snake.img}/></ImageContainer>
 			<StyledSecondaryHeadline>{props.snake.title}</StyledSecondaryHeadline>
 			<Paragraph>{props.snake.text}</Paragraph>

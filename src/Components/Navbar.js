@@ -2,20 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import {slowRock} from './ui/animations';
+
 const NavbarWrapper = styled.header`
-	padding: 0 20px;
 	box-shadow: ${props => props.theme.dropShadows.gray};
 	background-color: ${props => props.theme.colors.white};
 	height: 75px;	
-	position: sticky;
+	position: fixed;
+	width: 100%;
 	top: 0;
 	z-index: 10;
 `;
 
 const LinkList = styled.ul`
 	position: absolute;
-	top: 2em; 
-	right: 1em;
+	top: 32px; 
+	right: 10px;
 `;
 
 const StyledLink = styled(Link)`
@@ -34,6 +36,7 @@ const ListItem = styled.li`
 const Logo = styled.img`
 	opacity: .9;
 	max-width: 60px;
+	animation: ${slowRock} 2s alternate infinite ease-in-out;
 `;
 
 const LogoLink = styled(Link)`
@@ -46,10 +49,10 @@ const LogoLink = styled(Link)`
 const Navbar = () => {
 	return (
 		<NavbarWrapper>
-			<LogoLink to="/"><Logo src="/images/logo-alt.png"/></LogoLink>
+			<LogoLink to="/"><Logo src="/images/ampersand.svg"/></LogoLink>
 			<LinkList>
-				<ListItem><StyledLink to="/about">About the Snakes</StyledLink></ListItem>
-				<ListItem><StyledLink to ="/saved-snakes">Saved Snakes</StyledLink></ListItem>
+				<ListItem><StyledLink to="/snakes-in-need">Snakes in Need</StyledLink></ListItem>
+				<ListItem><StyledLink to ="/savior-directory">Savior Directory</StyledLink></ListItem>
 			</LinkList>
 		</NavbarWrapper>
 	);

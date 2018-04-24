@@ -8,6 +8,7 @@ const theme = {
 		electricPurple: '#5d00f4',
 		backgroundColor: '#e5f3ff',
 		murkyPurple: '#695e80',
+		tomatoRed: '#fc3a00',
 		white: '#fff',
 		delicatePink: '#ffe2df',
 	},

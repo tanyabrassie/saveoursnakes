@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Home from './Home';
-import About from './About';
-import SavedSnakesPage from './SavedSnakesPage';
+import Home from './Home/index';
+import SnakesInNeed from './SnakesInNeed/index';
+import Directory from './Directory/index';
 
 const Content = (props) => {
 	return (
@@ -14,9 +14,9 @@ const Content = (props) => {
 					memberList={props.memberList}
 				/>
 			</Route>
-			<Route exact path='/about' component={About}/>
-			<Route exact path='/saved-snakes'>
-				<SavedSnakesPage 
+			<Route exact path='/snakes-in-need' component={SnakesInNeed}/>
+			<Route exact path='/savior-directory'>
+				<Directory 
 					memberList={props.memberList}
 				/>
 			</Route>

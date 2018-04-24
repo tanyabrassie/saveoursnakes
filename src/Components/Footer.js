@@ -17,8 +17,8 @@ const FooterText = styled.p`
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterText>Save our Snakes was created by Tanya Brassie, 
-      Val Geyvandov and Maurice Slithers.</FooterText>
+      <FooterText>Save our Snakes was created by Tanya Brassie,  
+      <strike>Val Geyvandov</strike> and Maurice Slithers.</FooterText>
     </FooterContainer>
   );
 }; 

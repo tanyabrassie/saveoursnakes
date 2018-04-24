@@ -34,4 +34,5 @@ module.exports = {
       path.join(__dirname, 'node_modules'),
     ],
   },
+  devtool: 'source-map'
 };

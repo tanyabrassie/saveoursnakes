@@ -19,7 +19,7 @@ const ButtonStyles = css`
 	transition: .5s opacity;
 
 	:hover {
-		opacity: .8; 
+		opacity: .8;
 	}
 `;
 

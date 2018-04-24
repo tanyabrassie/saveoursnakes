@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const GrasslandsContainer = styled.section`
 	position: relative;
-	margin: 3em 0 0 0;
+	margin: 0;
 `;
 
 const Image = styled.img`
