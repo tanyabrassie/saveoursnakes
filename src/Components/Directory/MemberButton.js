@@ -33,7 +33,7 @@ const MemberButton = (props) => {
 			onClick={() => getMemberToMap(member)}
 		>
 			<ButtonText>{member.firstName} {member.lastName}</ButtonText>
-			<ButtonText>Assigned zone: {member.zipcode}</ButtonText>
+			<ButtonText>Saving zone: {member.zipcode}</ButtonText>
 		</Member>
 	);
 };

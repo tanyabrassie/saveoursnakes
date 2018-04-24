@@ -32,11 +32,17 @@ class Directory extends React.Component {
 				</Flex>
 				<Flex>
 					<Box w={1/3}>
-						{this.props.memberList.map((member, index) => {
-							return (
-								<MemberButton key={index} getMemberToMap={this.getMemberToMap} member={member} index={index}/>
-							);
-						})}
+						{ (this.props.memberList.length > 0) ? (
+							this.props.memberList.map((member, index) => {
+								return (
+									<MemberButton key={index} getMemberToMap={this.getMemberToMap} member={member} index={index}/>
+								);
+							})
+						) : (
+							<Flex p={3} bg={"#ffffffab"}>
+								<BasicText>No snakes currently are being saved. Register now!</BasicText>
+							</Flex>
+						)}
 					</Box>
 					<Box w={2/3}>
 						<Map memberToMap={this.state.memberToMap}/>
