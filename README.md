@@ -2,7 +2,7 @@
 Save Our Snakes
 ---
  
-Welcome to this rocking react project.
+Welcome to this rocking react project dedicated to all the snakes around the world (you know who you are!).
 
 Usage
 ---
