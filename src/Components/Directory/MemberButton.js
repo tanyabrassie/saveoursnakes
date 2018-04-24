@@ -24,27 +24,18 @@ const ButtonText = styled.span`
 	padding: 10px;
 `;
 
-
-class MemberButton extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-		}
-	}
-
-	render() {
-		const { member, index, getMemberToMap } = this.props;
-		return (
-			<Member 
-				align="center" 
-				p={5}
-				onClick={() => {getMemberToMap(member)}}
-			>
-				<ButtonText>{member.firstName} {member.lastName}</ButtonText>
-				<ButtonText>Assigned zone: {member.zipcode}</ButtonText>
-			</Member>
-		);
-	};
+const MemberButton = (props) => {
+	const { member, index, getMemberToMap } = props;
+	return (
+		<Member 
+			align="center" 
+			p={5}
+			onClick={() => getMemberToMap(member)}
+		>
+			<ButtonText>{member.firstName} {member.lastName}</ButtonText>
+			<ButtonText>Assigned zone: {member.zipcode}</ButtonText>
+		</Member>
+	);
 };
 
 export default MemberButton;
