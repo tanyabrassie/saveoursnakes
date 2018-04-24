@@ -79,15 +79,11 @@ validateForm() {
       });
 
     } else {
-      //show errors
+      //show errors 
      this.setState({hasErrors: true});
     }
   }
 
-  showErrorMessage() {
-
-  }
-  
 	render (props) {
 		return (
 			<FormContainer my={4} px={5} is="form" onSubmit={this.handleSubmit}>

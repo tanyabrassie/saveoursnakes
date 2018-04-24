@@ -18,17 +18,11 @@ class App extends React.Component {
     const storedMembers = JSON.parse(localStorage.getItem('members'));
     
     // set state to stored members if local storage has any members and if not, set empty state
-    if (storedMembers) {
-      this.state = {
-        members: storedMembers,
-      };
-    } else {
-      this.state = {
-        members: [],
-      };
-    }
+    this.state = {
+      members: storedMembers ? storedMembers : [],
+    };
   
-  this.addMember = this.addMember.bind(this);
+    this.addMember = this.addMember.bind(this);
 
   }
 
@@ -36,11 +30,10 @@ class App extends React.Component {
   // make call to donors choose, add project data to existing member object and
   // update state with new member, and then update local storage with updated state 
   addMember(member) {
-    axios.get('http://localhost:4545/getSnakeProjects?zip=' + member.zipcode)
-    .then(response => {
-      const newMember = (Object.assign(member, {projectData: response.data}));
+    axios.get('http://localhost:4545/getSnakeProjects?zip=' + member.zipcode).then(response => {
+      const newMember = Object.assign(member, { projectData: response.data });
       const updatedMembers = [...this.state.members, newMember];
-      this.setState({members: updatedMembers});
+      this.setState({ members: updatedMembers });
       localStorage.setItem('members', JSON.stringify(updatedMembers));
     });
   }
