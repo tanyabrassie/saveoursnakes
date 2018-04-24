@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MegaHeadline } from '../ui/typography';
+import {MegaHeadline} from '../ui/typography';
 import SnakeTiles from './SnakeTiles';
 import snakeData from '../../snakedata';
 

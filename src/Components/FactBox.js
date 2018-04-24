@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Paragraph, SecondaryHeadline } from './ui/typography';
-import { colorMorph, slowBob } from './ui/animations';
+import {Paragraph, SecondaryHeadline} from './ui/typography';
+import {colorMorph, slowBob} from './ui/animations';
 
 const FactBoxContainer = styled.div`
 	max-width: 250px;

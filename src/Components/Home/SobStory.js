@@ -4,8 +4,6 @@ import {Text} from 'rebass';
 
 import {ButtonLink, Button} from '../ui/Button';
 import {HeadlineLarge, MegaHeadline, BasicText} from '../ui/typography';
-import {colormorph} from '../ui/animations';
-
 
 const StyledParagraph = styled(BasicText)`
 	width: 75%;
@@ -15,10 +13,6 @@ const StyledParagraph = styled(BasicText)`
 
 const HeadlineContainer = styled.div`
 	margin: 5em 0;
-`;
-
-const Title = MegaHeadline.extend`
-	animation: ${colormorph} 2s alternate infinite ease-in-out;
 `;
 
 const IconContainer = styled.div`
@@ -42,7 +36,7 @@ const SobStory = () => {
   return (
     <section>
       <HeadlineContainer>
-        <Title textAlign="center">Save our Snakes!</Title>
+        <MegaHeadline textAlign="center">Save our Snakes!</MegaHeadline>
       </HeadlineContainer>
       <IconContainer>
         <Icon><img src="/images/construction.svg"/></Icon>
