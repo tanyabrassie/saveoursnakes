@@ -20,6 +20,10 @@ class Map extends React.Component {
     this.getMapCenter = this.getMapCenter.bind(this);
   }
 
+  // todo: update this getMapCenter function so it finds the center of all the points. Right now, I'm using the lat/long on the 
+  // object outside of the proposal data hoping it might actually be some center point but it doesn't
+  // appear so. 
+
   getMapCenter(memberToMap) {
     let mapCenter = {lat: 40.699921, lng: -73.924553};
     
@@ -60,35 +64,5 @@ class Map extends React.Component {
     );
   }
 }
-
-
-// const Map = ({memberToMap}) => {
-  
-//   let markers = [];
-//   if (memberToMap.projectData) {
-//     markers = memberToMap.projectData.map((marker, index) => {
-//       const markerLat = parseFloat(marker.latitude);
-//       const markerLng = parseFloat(marker.longitude);
-//       return (
-//         <MapMarker
-//           lat={markerLat}
-//           lng={markerLng}
-//           text={'project'}
-//           key={index}
-//         />
-//       );
-//     });
-//   }
-
-//   return (
-//     <GoogleMapReact
-//         bootstrapURLKeys={{key: 'AIzaSyDnXYgSKyV4HhkmPDXxOOpDFjNaUJPqomQ'}}
-//         defaultCenter={() => {getMapCenter(memberToMap)}}
-//         defaultZoom={11}
-//       >
-//         {markers}
-//       </GoogleMapReact>
-//   );
-// };
 
 export default Map;
