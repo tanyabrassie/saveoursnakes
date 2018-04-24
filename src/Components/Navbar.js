@@ -46,6 +46,7 @@ const LogoLink = styled(Link)`
 	left: 2em;
 `;
 
+// TODO: add active states to links
 const Navbar = () => {
 	return (
 		<NavbarWrapper>
