@@ -2,7 +2,7 @@
 Save Our Snakes
 ---
  
-Save Our Snakes, a web app for all the snakes of the world.  
+Save Our Snakes, a web app for all the snakes of the world. 
 
 Usage
 ---
