@@ -29,33 +29,7 @@ class SnakeForm extends React.Component {
 	handleChange(event) {
       this.setState({[event.target.name]: event.target.value});
   }
-  
-  validateField(fieldName, value) {
-    let fieldValidationErrors = this.state.formErrors;
-    let firstNameValid = this.state.firstNameValid;
-    let lastNameValid = this.state.lastNameValid;
-    let emailValid = this.state.emailValid;
-    let zipcodeValid = this.state.zipcodeValid;
-
-    switch(fieldName) {
-      case 'email':
-      emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-      fieldValidationErrors.email = emailValid ? '' : ' is invalid';
-      break;
-      default: 
-      break;
-    }
-
-    this.setState({formErrors: fieldValidationErrors,
-      emailValid: emailValid,
-      passwordValid: passwordValid
-    }, this.validateForm);
-}
-
-validateForm() {
-  this.setState({formValid: this.state.emailValid && this.state.passwordValid});
-  }
-
+ 
 	handleSubmit(e){
     e.preventDefault();
     //check to see if form is valid.

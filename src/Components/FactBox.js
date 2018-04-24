@@ -50,7 +50,7 @@ const bannerMessages = {
 const FactBox = (props) => {
 	return (
 		<FactBoxContainer>
-		<HarmlessBanner inNeed={props.snake.inNeed}>{props.snake.inNeed ? bannerMessages.inNeed : bannerMessages.notInNeed}</HarmlessBanner>
+			<HarmlessBanner inNeed={props.snake.inNeed}>{props.snake.inNeed ? bannerMessages.inNeed : bannerMessages.notInNeed}</HarmlessBanner>
 			<ImageContainer><Image src={props.snake.img}/></ImageContainer>
 			<StyledSecondaryHeadline>{props.snake.title}</StyledSecondaryHeadline>
 			<Paragraph>{props.snake.text}</Paragraph>
