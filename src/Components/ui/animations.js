@@ -35,3 +35,12 @@ export const slowRock = keyframes`
 	}
 
 `;
+
+export const crawlIn = keyframes`
+	0% {
+		transform: translateY(0);	
+	}
+	100% {
+		transform: translateY(70px);	
+	}	
+`;
