@@ -13,7 +13,6 @@ class Directory extends React.Component {
     };
 
     this.getMemberToMap = this.getMemberToMap.bind(this);
-
   }
 
   getMemberToMap(member) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Flex, Container} from 'rebass';
+import {Flex} from 'rebass';
 
 import {Headline, BasicText} from '../ui/typography';
 

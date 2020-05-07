@@ -1,8 +1,6 @@
 import React from 'react';
 import {Button} from 'rebass';
 import styled from 'styled-components';
-import {BasicText} from '../ui/typography';
-
 
 const Member = styled(Button)`
 	box-shadow: 1px 1px 6px 0px #eaeaea;
@@ -13,7 +11,6 @@ const Member = styled(Button)`
 	display: flex;
 	color: ${props => props.theme.colors.murkyPurple};
 
-	
 	&:hover {
 		background-color: ${props => props.theme.colors.mainPurple};
 		color: ${props => props.theme.colors.white};
@@ -25,7 +22,7 @@ const ButtonText = styled.span`
 `;
 
 const MemberButton = (props) => {
-  const { member, index, getMemberToMap } = props;
+  const { member, getMemberToMap } = props;
   return (
     <Member 
       align="center" 

@@ -1,13 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Flex, Box} from 'rebass';
-
 import Grasslands from '../Grasslands';
 import SobStory from './SobStory';
 import SaviorWall from './SaviorWall';
 import SnakeForm from './SnakeForm';
-import {Paragraph} from '../ui/typography';
-
 
 const SignUpZone = styled.section`
   background-color: ${props => props.theme.colors.delicatePink};
@@ -20,7 +17,7 @@ const Content = styled(Flex)`
 `;
 
 const Home = (props) => {
-  return (
+  return(
     <div>
       <SobStory />
       <Grasslands />

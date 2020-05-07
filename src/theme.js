@@ -1,5 +1,3 @@
-import styled from 'styled-components';
-
 const theme = {
   colors: {
     palePurple: '#efecf5',

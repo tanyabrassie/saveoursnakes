@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Text, Flex} from 'rebass';
 
-import {ButtonLink, Button} from '../ui/Button';
-import {HeadlineLarge, MegaHeadline, BasicText} from '../ui/typography';
+import {MegaHeadline, BasicText} from '../ui/typography';
 import DerpSpam from '../DerpSpam';
 
 const StyledParagraph = styled(BasicText)`

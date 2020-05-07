@@ -58,12 +58,12 @@ class SnakeForm extends React.Component {
     }
   }
 
-  render (props) {
+  render () {
     return (
       <FormContainer my={4} px={5} is="form" onSubmit={this.handleSubmit}>
         <Headline is="h2" py={2}>Save a Snake Right Now!</Headline>
         <BasicText py={2}>
-					It's easy, just three steps! Fill out the form below and you'll immediately be featured on our high profile Snake Savior Wall and notified of the snakes you've saved!  
+					It&apos;s easy, just three steps! Fill out the form below and you&apos;ll immediately be featured on our high profile Snake Savior Wall and notified of the snakes you&apos;ve saved!  
         </BasicText>
         <BasicText is="label">First Name</BasicText>
         <input type="text" 
