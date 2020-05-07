@@ -1,8 +1,8 @@
-import React from "react";
-import { Flex, Image, Box } from "rebass";
-import styled from "styled-components";
+import React from 'react';
+import { Flex, Image, Box } from 'rebass';
+import styled from 'styled-components';
 
-import { colorMorph, crawlIn } from "./ui/animations";
+import { colorMorph, crawlIn } from './ui/animations';
 
 const DerpAd = styled(Flex)`
   height: 60px;

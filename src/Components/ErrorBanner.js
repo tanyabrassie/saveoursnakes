@@ -1,8 +1,8 @@
-import React from "react";
-import { Flex } from "rebass";
-import styled from "styled-components";
+import React from 'react';
+import { Flex } from 'rebass';
+import styled from 'styled-components';
 
-import { BasicText } from "./ui/typography";
+import { BasicText } from './ui/typography';
 
 const Banner = styled(Flex)`
   background-color: ${(props) => props.theme.colors.tomatoRed};

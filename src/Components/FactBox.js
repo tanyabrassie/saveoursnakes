@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Paragraph, SecondaryHeadline } from "./ui/typography";
-import { slowBob } from "./ui/animations";
+import React from 'react';
+import styled from 'styled-components';
+import { Paragraph, SecondaryHeadline } from './ui/typography';
+import { slowBob } from './ui/animations';
 
 const FactBoxContainer = styled.div`
   max-width: 250px;
@@ -39,12 +39,12 @@ const HarmlessBanner = styled.div`
   top: 20px;
   position: absolute;
   right: -15px;
-  background-color: ${(props) => (props.inNeed ? "red" : "#f163ff")};
+  background-color: ${(props) => (props.inNeed ? 'red' : '#f163ff')};
 `;
 
 const bannerMessages = {
-  inNeed: "Endangered!",
-  notInNeed: "Threatened",
+  inNeed: 'Endangered!',
+  notInNeed: 'Threatened',
 };
 
 const FactBox = (props) => {

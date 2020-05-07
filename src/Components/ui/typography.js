@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Text as RebassText } from "rebass";
+import styled from 'styled-components';
+import { Text as RebassText } from 'rebass';
 
 export const Headline = styled(RebassText)`
   font-size: 1.5em;

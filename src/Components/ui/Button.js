@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
-import { Button as RebassButton } from "rebass";
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
+import { Button as RebassButton } from 'rebass';
 
 const ButtonStyles = css`
   background-color: ${(props) => props.theme.colors.electricPurple};

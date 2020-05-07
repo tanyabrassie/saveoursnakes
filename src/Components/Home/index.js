@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { Flex, Box } from "rebass";
-import Grasslands from "../Grasslands";
-import SobStory from "./SobStory";
-import SaviorWall from "./SaviorWall";
-import SnakeForm from "./SnakeForm";
+import React from 'react';
+import styled from 'styled-components';
+import { Flex, Box } from 'rebass';
+import Grasslands from '../Grasslands';
+import SobStory from './SobStory';
+import SaviorWall from './SaviorWall';
+import SnakeForm from './SnakeForm';
 
 const SignUpZone = styled.section`
   background-color: ${(props) => props.theme.colors.delicatePink};
@@ -22,7 +22,7 @@ const Home = (props) => {
       <SobStory />
       <Grasslands />
       <SignUpZone align="center">
-        <Content flexDirection={["column", "column", "row"]}>
+        <Content flexDirection={['column', 'column', 'row']}>
           <Box px={0} w={1 / 2}>
             <SaviorWall memberList={props.memberList} />
           </Box>

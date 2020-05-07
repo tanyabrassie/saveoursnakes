@@ -1,9 +1,9 @@
-import React from "react";
-import { Flex, Box } from "rebass";
-import { MegaHeadline, BasicText } from "../ui/typography";
-import Map from "./Map";
-import MemberButton from "./MemberButton";
-import Grasslands from "../Grasslands";
+import React from 'react';
+import { Flex, Box } from 'rebass';
+import { MegaHeadline, BasicText } from '../ui/typography';
+import Map from './Map';
+import MemberButton from './MemberButton';
+import Grasslands from '../Grasslands';
 
 class Directory extends React.Component {
   constructor() {
@@ -44,7 +44,7 @@ class Directory extends React.Component {
                 );
               })
             ) : (
-              <Flex p={3} bg={"#ffffffab"}>
+              <Flex p={3} bg={'#ffffffab'}>
                 <BasicText>
                   No snakes currently are being saved. Register now!
                 </BasicText>

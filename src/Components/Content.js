@@ -1,9 +1,9 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import Home from "./Home/index";
-import SnakesInNeed from "./SnakesInNeed/index";
-import Directory from "./Directory/index";
+import Home from './Home/index';
+import SnakesInNeed from './SnakesInNeed/index';
+import Directory from './Directory/index';
 
 const Content = (props) => {
   return (

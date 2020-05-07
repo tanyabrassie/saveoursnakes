@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import GoogleMapReact from "google-map-react";
+import React from 'react';
+import styled from 'styled-components';
+import GoogleMapReact from 'google-map-react';
 
 const Dot = styled.div`
   height: 10px;
@@ -46,7 +46,7 @@ class Map extends React.Component {
             <MapMarker
               lat={markerLat}
               lng={markerLng}
-              text={"project"}
+              text={'project'}
               key={index}
             />
           );
@@ -56,7 +56,7 @@ class Map extends React.Component {
 
     return (
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDnXYgSKyV4HhkmPDXxOOpDFjNaUJPqomQ" }}
+        bootstrapURLKeys={{ key: 'AIzaSyDnXYgSKyV4HhkmPDXxOOpDFjNaUJPqomQ' }}
         center={mapCenter}
         defaultZoom={11}
       >

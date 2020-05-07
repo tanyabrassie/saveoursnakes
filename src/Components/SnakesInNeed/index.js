@@ -1,7 +1,7 @@
-import React from "react";
-import { MegaHeadline } from "../ui/typography";
-import SnakeTiles from "./SnakeTiles";
-import snakeData from "../../snakedata";
+import React from 'react';
+import { MegaHeadline } from '../ui/typography';
+import SnakeTiles from './SnakeTiles';
+import snakeData from '../../snakedata';
 
 function filterSnakes(snake) {
   return !snake.featured;

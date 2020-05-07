@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import FactBox from "../FactBox";
+import React from 'react';
+import styled from 'styled-components';
+import FactBox from '../FactBox';
 
 const Tiles = styled.section`
   display: flex;

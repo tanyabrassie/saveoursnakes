@@ -1,6 +1,6 @@
-import React from "react";
-import { Button } from "rebass";
-import styled from "styled-components";
+import React from 'react';
+import { Button } from 'rebass';
+import styled from 'styled-components';
 
 const Member = styled(Button)`
   box-shadow: 1px 1px 6px 0px #eaeaea;

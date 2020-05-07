@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Flex } from "rebass";
+import React from 'react';
+import styled from 'styled-components';
+import { Flex } from 'rebass';
 
-import { Headline, BasicText } from "../ui/typography";
+import { Headline, BasicText } from '../ui/typography';
 
 const Wrapper = styled(Flex)`
   background-color: ${(props) => props.theme.colors.delicatePink};
@@ -10,10 +10,10 @@ const Wrapper = styled(Flex)`
 `;
 
 const SaviorWall = ({ memberList }) => {
-  return (
+  return (  
     <Wrapper my={4} px={5} flexDirection="column">
       <Headline py={2} is="h2">
-        Snake Saviors Wall
+              Snake Saviors Wall
       </Headline>
       <Flex flexDirection="column">
         {memberList.length > 0 ? (
@@ -28,7 +28,7 @@ const SaviorWall = ({ memberList }) => {
             );
           })
         ) : (
-          <Flex p={3} bg={"#ffffffab"}>
+          <Flex p={3} bg={'#ffffffab'}>
             <BasicText>
               No snakes currently are being saved. Register now!
             </BasicText>

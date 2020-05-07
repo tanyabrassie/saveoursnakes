@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-import { slowRock } from "./ui/animations";
+import { slowRock } from './ui/animations';
 
 const NavbarWrapper = styled.header`
   box-shadow: ${(props) => props.theme.dropShadows.gray};

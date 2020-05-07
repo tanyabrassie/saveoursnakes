@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { MegaHeadline, BasicText } from "../ui/typography";
-import DerpSpam from "../DerpSpam";
+import { MegaHeadline, BasicText } from '../ui/typography';
+import DerpSpam from '../DerpSpam';
 
 const StyledParagraph = styled(BasicText)`
   width: 75%;
@@ -35,7 +35,7 @@ const Icon = styled.div`
 const SobStory = () => {
   return (
     <section>
-      <DerpSpam targetedMessage={"DerpFaces for Slack! Emoting evolved."} />
+      <DerpSpam targetedMessage={'DerpFaces for Slack! Emoting evolved.'} />
       <HeadlineContainer>
         <MegaHeadline textAlign="center">Save our Snakes!</MegaHeadline>
       </HeadlineContainer>

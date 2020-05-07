@@ -1,10 +1,10 @@
-import React from "react";
-import { Flex } from "rebass";
-import styled from "styled-components";
+import React from 'react';
+import { Flex } from 'rebass';
+import styled from 'styled-components';
 
-import { Headline, BasicText } from "../ui/typography";
-import { Button } from "../ui/Button";
-import ErrorBanner from "../ErrorBanner";
+import { Headline, BasicText } from '../ui/typography';
+import { Button } from '../ui/Button';
+import ErrorBanner from '../ErrorBanner';
 
 const FormContainer = styled(Flex)`
   flex-direction: column;
@@ -15,10 +15,10 @@ class SnakeForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
-      zipcode: "",
-      email: "",
+      firstName: '',
+      lastName: '',
+      zipcode: '',
+      email: '',
       hasErrors: false,
     };
 
@@ -45,10 +45,10 @@ class SnakeForm extends React.Component {
 
       //clear state after submission
       this.setState({
-        firstName: "",
-        lastName: "",
-        zipcode: "",
-        email: "",
+        firstName: '',
+        lastName: '',
+        zipcode: '',
+        email: '',
         hasErrors: false,
       });
     } else {
@@ -96,11 +96,11 @@ class SnakeForm extends React.Component {
           value={this.state.zipcode}
           onChange={this.handleChange}
         />
-        <Flex w={"200px"} py={3}>
+        <Flex w={'200px'} py={3}>
           <Button>Save Snakes Now</Button>
         </Flex>
         {this.state.hasErrors && (
-          <ErrorBanner message={"Whoops, you have some errors!"} />
+          <ErrorBanner message={'Whoops, you have some errors!'} />
         )}
       </FormContainer>
     );
