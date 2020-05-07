@@ -43,16 +43,16 @@ class App extends React.Component {
       <ThemeProvider theme={theme}> 
         <div> 
           <Navbar/>
-            <PageLayout>
-              <Content 
-                memberList={this.state.members} 
-                addMember={this.addMember}
-              />
-            </PageLayout>
+          <PageLayout>
+            <Content 
+              memberList={this.state.members} 
+              addMember={this.addMember}
+            />
+          </PageLayout>
           <Footer/>
         </div>
       </ThemeProvider>
-    )
+    );
   }
 }
 

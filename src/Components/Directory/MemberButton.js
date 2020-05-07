@@ -25,17 +25,17 @@ const ButtonText = styled.span`
 `;
 
 const MemberButton = (props) => {
-	const { member, index, getMemberToMap } = props;
-	return (
-		<Member 
-			align="center" 
-			p={5}
-			onClick={() => getMemberToMap(member)}
-		>
-			<ButtonText>{member.firstName} {member.lastName}</ButtonText>
-			<ButtonText>Saving zone: {member.zipcode}</ButtonText>
-		</Member>
-	);
+  const { member, index, getMemberToMap } = props;
+  return (
+    <Member 
+      align="center" 
+      p={5}
+      onClick={() => getMemberToMap(member)}
+    >
+      <ButtonText>{member.firstName} {member.lastName}</ButtonText>
+      <ButtonText>Saving zone: {member.zipcode}</ButtonText>
+    </Member>
+  );
 };
 
 export default MemberButton;

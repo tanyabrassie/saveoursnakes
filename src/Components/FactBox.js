@@ -43,19 +43,19 @@ const HarmlessBanner = styled.div`
 `;
 
 const bannerMessages = {
-	inNeed: 'Endangered!',
-	notInNeed: 'Threatened'
-}
+  inNeed: 'Endangered!',
+  notInNeed: 'Threatened'
+};
 
 const FactBox = (props) => {
-	return (
-		<FactBoxContainer>
-			<HarmlessBanner inNeed={props.snake.inNeed}>{props.snake.inNeed ? bannerMessages.inNeed : bannerMessages.notInNeed}</HarmlessBanner>
-			<ImageContainer><Image src={props.snake.img}/></ImageContainer>
-			<StyledSecondaryHeadline>{props.snake.title}</StyledSecondaryHeadline>
-			<Paragraph>{props.snake.text}</Paragraph>
-		</FactBoxContainer>
-	);
-}
+  return (
+    <FactBoxContainer>
+      <HarmlessBanner inNeed={props.snake.inNeed}>{props.snake.inNeed ? bannerMessages.inNeed : bannerMessages.notInNeed}</HarmlessBanner>
+      <ImageContainer><Image src={props.snake.img}/></ImageContainer>
+      <StyledSecondaryHeadline>{props.snake.title}</StyledSecondaryHeadline>
+      <Paragraph>{props.snake.text}</Paragraph>
+    </FactBoxContainer>
+  );
+};
 
 export default FactBox;

@@ -37,7 +37,7 @@ const Icon = styled.div`
 const SobStory = () => {
   return (
     <section>
-			<DerpSpam targetedMessage={'DerpFaces for Slack! Emoting evolved.'}/>
+      <DerpSpam targetedMessage={'DerpFaces for Slack! Emoting evolved.'}/>
       <HeadlineContainer>
         <MegaHeadline textAlign="center">Save our Snakes!</MegaHeadline>
       </HeadlineContainer>
@@ -46,9 +46,9 @@ const SobStory = () => {
         <Icon><img src="/images/homelessness.svg"/></Icon>
         <Icon><img src="/images/populationdecline.svg"/></Icon>
       </IconContainer>
-			<StyledParagraph>Since the mid 1800s, snake populations in Prospect Park have experienced unpredecented decline.  Urbanization and gentrification of Prospect Park and the surrounding areas led to the significant loss of natural snake dwellings.</StyledParagraph>
-			<StyledParagraph>Conesquently, the 20th century saw mass emigrations of snake colonies from the area.  Continued construction of luxury high-rises along the park’s perimeter and development of park trails have made the area a vertiable danger zone for those snakes choosing to remain.  Many snakes have been forced out of their homes with no viable alternatives.</StyledParagraph>
-			<StyledParagraph>Snakes need our help! Sponsor a snake today and help save a life.</StyledParagraph>
+      <StyledParagraph>Since the mid 1800s, snake populations in Prospect Park have experienced unpredecented decline.  Urbanization and gentrification of Prospect Park and the surrounding areas led to the significant loss of natural snake dwellings.</StyledParagraph>
+      <StyledParagraph>Conesquently, the 20th century saw mass emigrations of snake colonies from the area.  Continued construction of luxury high-rises along the park’s perimeter and development of park trails have made the area a vertiable danger zone for those snakes choosing to remain.  Many snakes have been forced out of their homes with no viable alternatives.</StyledParagraph>
+      <StyledParagraph>Snakes need our help! Sponsor a snake today and help save a life.</StyledParagraph>
     </section>
   );
 };

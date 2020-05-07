@@ -11,18 +11,18 @@ const Tiles = styled.section`
 `;
 
 const SnakeTiles = (props) => {
-	const snakeData = props.snakeData;
+  const snakeData = props.snakeData;
 
-	return (
-		<Tiles>
-			{snakeData.map(function(snake, index){
-				return (
-					<FactBox key={index} snake={snake}/>
-				);
-			})}
-		</Tiles>
-	);
+  return (
+    <Tiles>
+      {snakeData.map(function(snake, index){
+        return (
+          <FactBox key={index} snake={snake}/>
+        );
+      })}
+    </Tiles>
+  );
 
-}
+};
 
 export default SnakeTiles;	

@@ -48,15 +48,15 @@ const LogoLink = styled(Link)`
 
 // TODO: add active states to links
 const Navbar = () => {
-	return (
-		<NavbarWrapper>
-			<LogoLink to="/"><Logo src="/images/ampersand.svg"/></LogoLink>
-			<LinkList>
-				<ListItem><StyledLink to="/snakes-in-need">Snakes in Need</StyledLink></ListItem>
-				<ListItem><StyledLink to ="/savior-directory">Savior Directory</StyledLink></ListItem>
-			</LinkList>
-		</NavbarWrapper>
-	);
+  return (
+    <NavbarWrapper>
+      <LogoLink to="/"><Logo src="/images/ampersand.svg"/></LogoLink>
+      <LinkList>
+        <ListItem><StyledLink to="/snakes-in-need">Snakes in Need</StyledLink></ListItem>
+        <ListItem><StyledLink to ="/savior-directory">Savior Directory</StyledLink></ListItem>
+      </LinkList>
+    </NavbarWrapper>
+  );
 };
 
 export default Navbar;

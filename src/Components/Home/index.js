@@ -20,18 +20,18 @@ const Content = styled(Flex)`
 `;
 
 const Home = (props) => {
-	return (
-		<div>
+  return (
+    <div>
       <SobStory />
       <Grasslands />
       <SignUpZone align="center">
-        <Content flexDirection={["column", "column", "row"]}>
+        <Content flexDirection={['column', 'column', 'row']}>
           <Box px={0} w={1/2}><SaviorWall memberList={props.memberList}/></Box>
           <Box px={0} w={1/2}><SnakeForm addMember={props.addMember}/></Box>
         </Content>
       </SignUpZone>
-		</div>
-	);
+    </div>
+  );
 };
 
 export default Home;

@@ -16,18 +16,18 @@ const SaviorWall = ({ memberList }) => {
       <Flex flexDirection="column">
         {(memberList.length > 0) ? (
           memberList.map((member, index) => {
-          return (
-            <Flex justify="space-between" py={2} key={index}>
-              <BasicText mr={2} is="strong">{member.firstName} {member.lastName}</BasicText>
-              <BasicText is="span">Saving Zone: {member.zipcode}</BasicText>
-            </Flex>
-          );
-        })
-      ) : (
-        <Flex p={3} bg={"#ffffffab"}>
-          <BasicText>No snakes currently are being saved. Register now!</BasicText>
-        </Flex>
-       )}
+            return (
+              <Flex justify="space-between" py={2} key={index}>
+                <BasicText mr={2} is="strong">{member.firstName} {member.lastName}</BasicText>
+                <BasicText is="span">Saving Zone: {member.zipcode}</BasicText>
+              </Flex>
+            );
+          })
+        ) : (
+          <Flex p={3} bg={'#ffffffab'}>
+            <BasicText>No snakes currently are being saved. Register now!</BasicText>
+          </Flex>
+        )}
       </Flex>
     </Wrapper>
   );

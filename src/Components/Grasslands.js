@@ -11,11 +11,11 @@ const Image = styled.img`
 `;
 
 const Grasslands = () => {
-	return (
-		<GrasslandsContainer>
-			<Image src="/images/grass.svg"/>
-		</GrasslandsContainer>
-	);
+  return (
+    <GrasslandsContainer>
+      <Image src="/images/grass.svg"/>
+    </GrasslandsContainer>
+  );
 };
 
 export default Grasslands;

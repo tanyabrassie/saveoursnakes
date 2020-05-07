@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterText>Save our Snakes was created by Tanya Brassie,  
-      <strike>Val Geyvandov</strike> and Maurice Slithers.</FooterText>
+        <strike>Val Geyvandov</strike> and Maurice Slithers.</FooterText>
     </FooterContainer>
   );
 }; 

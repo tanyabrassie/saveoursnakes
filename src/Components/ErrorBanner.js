@@ -19,6 +19,6 @@ const ErrorBanner = ({message}) => {
       <StyledText>{message}</StyledText>
     </Banner>
   );
-}
+};
 
 export default ErrorBanner;

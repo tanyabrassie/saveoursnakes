@@ -42,6 +42,6 @@ const DerpSpam = (props) => {
       <Box p={1}><DerpIcon src="/images/sads.png"/></Box>
     </DerpAd>
   );
-}
+};
 
 export default DerpSpam;
