@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import FactBox from '../FactBox';
+import React from "react";
+import styled from "styled-components";
+import FactBox from "../FactBox";
 
 const Tiles = styled.section`
-	display: flex;	
-	justify-content: center;
-	margin: 2em 0;
-	flex-wrap: wrap;	
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+  flex-wrap: wrap;
 `;
 
 const SnakeTiles = (props) => {
@@ -14,14 +14,11 @@ const SnakeTiles = (props) => {
 
   return (
     <Tiles>
-      {snakeData.map(function(snake, index){
-        return (
-          <FactBox key={index} snake={snake}/>
-        );
+      {snakeData.map(function (snake, index) {
+        return <FactBox key={index} snake={snake} />;
       })}
     </Tiles>
   );
-
 };
 
-export default SnakeTiles;	
+export default SnakeTiles;

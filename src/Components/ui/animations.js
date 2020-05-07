@@ -1,4 +1,4 @@
-import {keyframes} from 'styled-components';
+import { keyframes } from "styled-components";
 
 export const colorMorph = keyframes`
 	from {
@@ -8,7 +8,6 @@ export const colorMorph = keyframes`
 		background-color: #7233f7;
 	}
 `;
-
 
 export const slowBob = keyframes`
 	0% {

@@ -1,31 +1,25 @@
+## Save Our Snakes
 
-Save Our Snakes
----
- 
-Save Our Snakes, a web app for all the snakes of the world. 
+Save Our Snakes, a web app for all the snakes of the world.
 
-Usage
----
- 
+## Usage
+
 Start the development server with this command:
- 
+
 ```
 npm start
 ```
- 
+
 Save our Snakes runs on localhost:4545
- 
-Setup
----
- 
+
+## Setup
+
 ```
 npm install
 ```
 
- 
-Compile
----
- 
+## Compile
+
 ```
 npm run compile
 ```

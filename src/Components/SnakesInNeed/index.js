@@ -1,9 +1,9 @@
-import React from 'react';
-import {MegaHeadline} from '../ui/typography';
-import SnakeTiles from './SnakeTiles';
-import snakeData from '../../snakedata';
+import React from "react";
+import { MegaHeadline } from "../ui/typography";
+import SnakeTiles from "./SnakeTiles";
+import snakeData from "../../snakedata";
 
-function filterSnakes (snake) {
+function filterSnakes(snake) {
   return !snake.featured;
 }
 
@@ -20,10 +20,12 @@ class SnakesInNeed extends React.Component {
   render() {
     return (
       <section>
-        <MegaHeadline py={4} textAlign="center">Snakes in Need</MegaHeadline>
-        <SnakeTiles snakeData={filteredSnakes}/>
+        <MegaHeadline py={4} textAlign="center">
+          Snakes in Need
+        </MegaHeadline>
+        <SnakeTiles snakeData={filteredSnakes} />
       </section>
     );
   }
-}	
+}
 export default SnakesInNeed;
