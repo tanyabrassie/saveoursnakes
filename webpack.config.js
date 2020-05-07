@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-      historyApiFallback: true
+    historyApiFallback: true
   },
   module: {
     rules: [
@@ -23,8 +23,8 @@ module.exports = {
       }, {
         test: /\.css$/,
         use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" }
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
         ]
       }
     ]  
